@@ -110,3 +110,197 @@ main {
 .section-option div {
  font-size: 0.8rem;
 }
+
+/* Datos */
+.datos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* Descripción del proyecto*/
+.projectDescription-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.project-formulario,
+.project-fecha 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.projectDescription-container section input,
+.projectDescription-container section select
+{
+  border-radius: 3px;
+  border: 1px solid #a5a5a5;
+  height: 30px;
+  width: 100%;
+}
+select {
+  cursor: pointer;
+}
+
+.projectDescription-container section div{
+  font-size: 0.9rem;
+}
+
+.project-IDORC {
+  background-color: #eaeaea;
+}
+
+.project-fechaIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  height: 30px;;
+}
+
+.project-fechaIcon img {
+  height: 50%;
+}
+
+.project-calendario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.project-calendario input {
+  cursor: pointer;
+}
+
+.proyecto-prioridad {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #fec702;
+  width: fit-content;
+}
+
+/* Busqueda de Proyecto */
+.searchProject-container  {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  background-color: #EFF5FC;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.project-searchSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-searchSection input {
+  padding: 5px;
+  width: 100%;
+}
+
+.proyecto-buscar input {
+  padding: 20px;
+}
+
+.proyecto-buscar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.proyecto-buscar input {
+  padding: 5px;
+  width: 50%;
+}
+
+.proyecto-buscar div {
+  padding: 10px 30px;
+  border-radius: 20px;
+  width: fit-content;
+  background-color: #fec702;
+  text-align: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.project-creation {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 15px;
+}
+
+.no-capex-opex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.no-capex-opex input{
+  width: 100%;
+  padding: 5px;
+}
+
+.capex-opex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.capex-opex input{
+  width: 100%;
+  padding: 5px;
+}
+
+.capex-opex div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.proyecto-signature {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 10px;
+}
+
+.proyecto-signature input {
+  width: 100%;
+}
+
+#textInput {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  padding: 5px;
+  outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  .datos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .project-calendario {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-creation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
