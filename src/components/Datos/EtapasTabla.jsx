@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import editar from "../../img/editar.svg";
+import eliminar from "../../img/delete.svg";
+import EditarEtapa from "./EditarEtapa";
 
-const EtapasTabla = ({ etapas, onEdit, handleDeleteEtapa }) => {
+const EtapasTabla = ({ etapas, handleEditEtapa, handleDeleteEtapa }) => {
+  const [showEditarModal, setShowEditarModal] = useState(false);
+  const [selectedEtapaIndex, setSelectedEtapaIndex] = useState(null);
+
+  const handleEditClick = (index) => {
+    setSelectedEtapaIndex(index);
+    setShowEditarModal(true);
+  };
+
+  const handleEditarEtapaClose = () => {
+    setShowEditarModal(false);
+    setSelectedEtapaIndex(null);
+  };
+
+  const handleEditarEtapaSave = (editedEtapaData) => {
+    handleEditEtapa(selectedEtapaIndex, editedEtapaData);
+    handleEditarEtapaClose();
+  };
+
   return (
     <div>
       {etapas.map((etapa, index) => (
@@ -21,7 +42,10 @@ const EtapasTabla = ({ etapas, onEdit, handleDeleteEtapa }) => {
             <div>{etapa.endDate}</div>
           </section>
           <section>
-            <div onClick={() => onEdit(index)} className="etapa-editar">
+            <div
+              onClick={() => handleEditClick(index)}
+              className="etapa-editar"
+            >
               Editar
             </div>
           </section>
@@ -35,6 +59,14 @@ const EtapasTabla = ({ etapas, onEdit, handleDeleteEtapa }) => {
           </section>
         </div>
       ))}
+
+      {showEditarModal && (
+        <EditarEtapa
+          onClose={handleEditarEtapaClose}
+          etapaData={etapas[selectedEtapaIndex]}
+          onSave={handleEditarEtapaSave}
+        />
+      )}
     </div>
   );
 };

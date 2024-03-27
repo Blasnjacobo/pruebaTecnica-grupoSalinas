@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import agregar from "../../img/agregar.svg";
 import AgregarEtapa from "./AgregarEtapa";
-import MostrarEtapas from "./MostrarEtapas";
+import Encabezado from "./Encabezado";
 
 const Etapa = () => {
   const [showAgregarEtapa, setShowAgregarEtapa] = useState(false);
@@ -36,6 +36,13 @@ const Etapa = () => {
     handleCloseAgregarEtapa();
   };
 
+  const handleEditEtapa = (index, editedEtapaData) => {
+    // Update the etapas array with the edited data
+    const updatedEtapas = [...etapas];
+    updatedEtapas[index] = editedEtapaData;
+    setEtapas(updatedEtapas);
+  };
+
   const handleDeleteEtapa = (index) => {
     const updatedEtapas = etapas.filter((_, i) => i !== index);
     setEtapas(updatedEtapas);
@@ -60,7 +67,11 @@ const Etapa = () => {
         </div>
       )}
       {etapas.length > 0 && (
-        <MostrarEtapas etapas={etapas} handleDeleteEtapa={handleDeleteEtapa} />
+        <Encabezado
+          etapas={etapas}
+          handleDeleteEtapa={handleDeleteEtapa}
+          handleEditEtapa={handleEditEtapa}
+        />
       )}
     </div>
   );
