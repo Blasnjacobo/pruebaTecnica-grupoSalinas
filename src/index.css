@@ -458,6 +458,21 @@ select {
   height: 60%;
 }
 
+.mostrar-etapas-values {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.mostrar-etapas section {
+  height: 30px;
+  width: 100%;
+  padding-top: 5px;
+}
 
 @media screen and (max-width: 800px) {
   .datos-proyectos {

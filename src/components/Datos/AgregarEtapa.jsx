@@ -22,6 +22,13 @@ const AgregarEtapa = ({ onClose, setFormData, formData, onFormSubmit }) => {
     }
     onFormSubmit(formData);
     onClose();
+    setFormData({
+      initiativeTitle: "",
+      stageDescription: "",
+      stageDeliverable: "",
+      startDate: "",
+      endDate: "",
+    });
   };
 
   const handleCancel = () => {
