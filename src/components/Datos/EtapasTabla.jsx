@@ -1,6 +1,6 @@
 import React from "react";
 
-const EtapasTabla = ({ etapas, onEdit, onDelete }) => {
+const EtapasTabla = ({ etapas, onEdit, handleDeleteEtapa }) => {
   return (
     <div>
       {etapas.map((etapa, index) => (
@@ -21,10 +21,17 @@ const EtapasTabla = ({ etapas, onEdit, onDelete }) => {
             <div>{etapa.endDate}</div>
           </section>
           <section>
-            <div onClick={() => onEdit(index)}>Editar</div>
+            <div onClick={() => onEdit(index)} className="etapa-editar">
+              Editar
+            </div>
           </section>
           <section>
-            <div onClick={() => onDelete(index)}>Eliminar</div>
+            <div
+              onClick={() => handleDeleteEtapa(index)}
+              className="etapa-eliminar"
+            >
+              Eliminar
+            </div>
           </section>
         </div>
       ))}

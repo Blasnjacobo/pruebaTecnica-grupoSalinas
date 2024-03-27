@@ -36,6 +36,11 @@ const Etapa = () => {
     handleCloseAgregarEtapa();
   };
 
+  const handleDeleteEtapa = (index) => {
+    const updatedEtapas = etapas.filter((_, i) => i !== index);
+    setEtapas(updatedEtapas);
+  };
+
   return (
     <div className="etapa-container" onClick={handleOutsideClick}>
       <div className="agregar-etapa" onClick={handleClickAgregar}>
@@ -54,7 +59,9 @@ const Etapa = () => {
           </div>
         </div>
       )}
-      {etapas.length > 0 && <MostrarEtapas etapas={etapas} />}
+      {etapas.length > 0 && (
+        <MostrarEtapas etapas={etapas} handleDeleteEtapa={handleDeleteEtapa} />
+      )}
     </div>
   );
 };

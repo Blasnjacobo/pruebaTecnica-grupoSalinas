@@ -1,10 +1,10 @@
 import React from "react";
 import Encabezado from "./Encabezado";
 
-const MostrarEtapas = ({ etapas }) => {
+const MostrarEtapas = ({ etapas, handleDeleteEtapa }) => {
   return (
     <div>
-      <Encabezado etapas={etapas} />
+      <Encabezado etapas={etapas} handleDeleteEtapa={handleDeleteEtapa} />
     </div>
   );
 };

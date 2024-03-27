@@ -3,7 +3,7 @@ import editar from "../../img/editar.svg";
 import eliminar from "../../img/delete.svg";
 import EtapasTabla from "./EtapasTabla";
 
-const Encabezado = ({ etapas }) => {
+const Encabezado = ({ etapas, handleDeleteEtapa }) => {
   return (
     <div className="mostrar-etapas-container">
       <div className="mostrar-etapas-titulo">Etapas</div>
@@ -34,7 +34,7 @@ const Encabezado = ({ etapas }) => {
           />
         </section>
       </div>
-      <EtapasTabla etapas={etapas} />
+      <EtapasTabla etapas={etapas} handleDeleteEtapa={handleDeleteEtapa} />
     </div>
   );
 };
