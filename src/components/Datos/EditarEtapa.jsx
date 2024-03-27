@@ -11,6 +11,15 @@ const EditarEtapa = ({ onClose, etapaData, onSave }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      !formData.initiativeTitle ||
+      !formData.stageDescription ||
+      !formData.startDate ||
+      !formData.endDate
+    ) {
+      alert("Please fill in all mandatory fields");
+      return;
+    }
     onSave(formData);
     onClose();
   };
@@ -107,7 +116,7 @@ const EditarEtapa = ({ onClose, etapaData, onSave }) => {
             Cancelar
           </button>
           <button type="submit" className="etapa-enviar-agregar">
-            Guardar
+            Modificar
           </button>
         </section>
       </form>

@@ -502,4 +502,18 @@ select {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
+  .datos-asignaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .mostrar-etapas-values, .mostrar-etapas {
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
 }

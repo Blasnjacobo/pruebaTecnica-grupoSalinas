@@ -61,11 +61,15 @@ const EtapasTabla = ({ etapas, handleEditEtapa, handleDeleteEtapa }) => {
       ))}
 
       {showEditarModal && (
-        <EditarEtapa
-          onClose={handleEditarEtapaClose}
-          etapaData={etapas[selectedEtapaIndex]}
-          onSave={handleEditarEtapaSave}
-        />
+        <div className="modal">
+          <div className="modal-content">
+            <EditarEtapa
+              onClose={handleEditarEtapaClose}
+              etapaData={etapas[selectedEtapaIndex]}
+              onSave={handleEditarEtapaSave}
+            />
+          </div>
+        </div>
       )}
     </div>
   );
