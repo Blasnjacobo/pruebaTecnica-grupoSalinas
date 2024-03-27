@@ -14,6 +14,10 @@ body{
   align-items: center;
   border-bottom: 2px solid #eaeaea;
   height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
 }
 
 .header-section1 {
@@ -160,7 +164,7 @@ select {
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
-  height: 30px;;
+  height: 30px;
 }
 
 .project-fechaIcon img {
@@ -296,6 +300,8 @@ select {
 .datos-asignaciones {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   gap: 80px;
   margin-top: 50px;
 }
@@ -315,8 +321,146 @@ select {
   background-color: #fec702;
 }
 
+/* Agregar etapa */
+.agregar-etapa {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 5vh;
+  margin-top: 50px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.agregar-etapa div {
+  border-bottom: 1px solid #000;
+}
+
+.agregar-etapa img {
+  height: 100%;
+}
+
+/* Etapa */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow: auto; 
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.agregar-modal h5 {
+  border-bottom: 3px solid #fec702;
+}
+
+.etapa-infoIcon {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.etapa-Icon {
+  height: 50%;
+}
+
+.agregar-modal input {
+  width: 100%;
+}
+
+.modal-descripcion {
+  padding: 30px 5px;
+}
+
+.etapa-enviar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.etapa-enviar div {
+  padding: 5px 30px;
+}
+
+.etapa-cancelar {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+
+.etapa-enviar-agregar {
+  background-color: #fec702;
+  border-radius: 5px;
+  padding: 10px 30px;
+  border:  0px solid #fec702;
+}
+
+.agregar-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Mostrar etapas */
+.mostrar-etapas-container {
+  border: 1px solid #000;
+  margin: 20px 5px;
+}
+
+.mostrar-etapas-titulo {
+  margin: 20px 10px;
+  font-weight: bold;
+}
+
+.mostrar-etapas {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.mostrar-etapas section {
+  height: 30px;
+  background-color: #a5a5a5;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.etapa-icono-display {
+  height: 60%;
+}
+
+
 @media screen and (max-width: 800px) {
-  .datos-container {
+  .datos-proyectos {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -328,6 +472,12 @@ select {
   }
 
   .project-creation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .proyecto-signature {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
