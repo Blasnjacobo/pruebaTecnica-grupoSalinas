@@ -15,25 +15,30 @@ const SearchProject = () => {
       </section>
       <section className="project-searchSection">
         <div>Nombre del proyecto</div>
-        <input />
+        <input className="project-background" />
       </section>
       <section className="project-searchSection">
         <div>Descripción del proyecto</div>
-        <input />
+        <input className="project-background" />
       </section>
-      <section className="project-creation">
+      <section className="project-creation ">
         <div className="no-capex-opex">
           <div>Fecha de creación</div>
-          <input type="text" id="dateInput" placeholder="dd-mm-aaaa" />
+          <input
+            type="text"
+            id="dateInput"
+            placeholder="dd-mm-aaaa"
+            className="project-background"
+          />
         </div>
         <div className="capex-opex">
           <div>
             <div>Capex</div>
-            <input />
+            <input className="project-background" />
           </div>
           <div>
             <div>Opex</div>
-            <input />
+            <input className="project-background" />
           </div>
         </div>
       </section>

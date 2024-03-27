@@ -112,7 +112,7 @@ main {
 }
 
 /* Datos */
-.datos-container {
+.datos-proyectos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -278,12 +278,41 @@ select {
   width: 100%;
 }
 
+.project-background {
+  background-color:   #eaeaea;
+  border:   1px solid #a5a5a5;
+  border-radius: 5px;
+}
+
 #textInput {
   border: none;
   border-bottom: 1px solid #000;
   background-color: transparent;
   padding: 5px;
   outline: none;
+}
+
+/* Datos Asignaciones */
+.datos-asignaciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  margin-top: 50px;
+}
+
+.datos-asignaciones section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.datos-asignaciones section input, .datos-asignaciones section select {
+  width: 100%;
+  padding: 5px;
+}
+
+#mySelect option {
+  background-color: #fec702;
 }
 
 @media screen and (max-width: 800px) {
