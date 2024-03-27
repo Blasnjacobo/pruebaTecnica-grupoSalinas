@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import editar from "../../img/editar.svg";
-import eliminar from "../../img/delete.svg";
 import EditarEtapa from "./EditarEtapa";
 
 const EtapasTabla = ({ etapas, handleEditEtapa, handleDeleteEtapa }) => {

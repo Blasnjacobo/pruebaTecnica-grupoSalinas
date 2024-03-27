@@ -14,9 +14,6 @@ const Etapa = () => {
     endDate: "",
   });
 
-  console.log(etapas);
-  console.log(formData);
-
   const handleClickAgregar = () => {
     setShowAgregarEtapa(true);
   };
@@ -37,7 +34,6 @@ const Etapa = () => {
   };
 
   const handleEditEtapa = (index, editedEtapaData) => {
-    // Update the etapas array with the edited data
     const updatedEtapas = [...etapas];
     updatedEtapas[index] = editedEtapaData;
     setEtapas(updatedEtapas);

@@ -6,7 +6,6 @@ import Datos from "./components/Datos/Datos";
 
 function App() {
   const [section, setSection] = useState("");
-  console.log(section);
   return (
     <div className="App">
       <Header />
