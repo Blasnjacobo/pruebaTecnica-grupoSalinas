@@ -12,7 +12,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #eaeaea;
   height: 10vh;
 }
 
@@ -73,4 +73,40 @@ body{
   width: 1px;
   height: 70%;
   background-color: #fec702;
+}
+
+/* Main */
+main {
+  margin: 2rem;
+}
+
+/* Secciones */
+.sections-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid #eaeaea;
+  height: 10vh;
+}
+
+.section-option {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 1rem;
+  width: 150px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.section-option:hover {
+  border-bottom: 5px solid #fec702;
+}
+
+.section-option img {
+  max-width: 20%;
+}
+
+.section-option div {
+ font-size: 0.8rem;
 }
